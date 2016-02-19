@@ -1,5 +1,8 @@
+## Usage example with saas+webpack
+
 run 
+``` text
 npm install
 webpack
-
-see build/ directory
+```
+see build files in build/ directory
