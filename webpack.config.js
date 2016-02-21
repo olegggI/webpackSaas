@@ -16,6 +16,9 @@ module.exports = {
     ],
     watch: true,
     devtool: "source-map",
+    resolve: {
+        modulesDirectories: ['css/saas', 'html']
+    },
     module: {
         loaders: [
         {

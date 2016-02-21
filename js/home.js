@@ -4,5 +4,5 @@ welcome('welcome Oleg!');
 
 require('./clickme');
 
-var compiled = require('../html/hello.html');
+var compiled = require('hello.html');
 window.aha = compiled({name: "world"});
