@@ -4,28 +4,30 @@ var path = require('path');
 module.exports = {
     // context: __dirname + "/app",
     entry: {
-        home: "./js/home",
-        style: "./css/style"
+        home: "./js/home"
     },
     output: {
-        filename: '[name].js',
+        filename: 'build.js',
         path: path.join(__dirname, './build'),
-        publicPath: '/build'
+        publicPath: '/build/'
     },
     plugins: [
         new ExtractTextPlugin('[name].css')
     ],
     watch: true,
-    watchOptions: {
-    	aggregateTimeout: 100
-    },
     devtool: "source-map",
     module: {
-        loaders: [{
+        loaders: [
+        {
             test: /\.scss$/,
             loader: ExtractTextPlugin.extract(
             "style",
             "css!sass")
-        }]
+        },
+        { 
+            test: /\.html$/, 
+            loader: "underscore-template-loader"
+        }
+        ]
     }
 };

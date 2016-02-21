@@ -1,3 +1,10 @@
-$piska-color: #fdfdfd;
+$piska-color: yellow;
 
-#piska {color: blue}
+div#mydiv {
+    color: $piska-color;
+    background: black;
+    span {
+        font-weight: bold;
+        color: red;
+    }
+}
