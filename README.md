@@ -1,8 +1,11 @@
 ## Usage example with saas+webpack
 
-run 
+Run:
 ``` text
+npm install webpack -g
+npm install webpack-dev-server -g
 npm install
 webpack
+webpack-dev-server
 ```
-see build files in build/ directory
+See build files in build/ directory and open http://localhost:8080
