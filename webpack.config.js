@@ -1,5 +1,7 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
+var bower_dir = __dirname + '/bower_components';
+var webpack = require('webpack');
 
 module.exports = {
     // context: __dirname + "/app",
@@ -13,11 +15,19 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin('[name].css')
+        , new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
     ],
     watch: true,
     devtool: "source-map",
     resolve: {
-        modulesDirectories: ['css/saas', 'html']
+        modulesDirectories: ['css/saas', 'html', 'bower_components'],
+        alias: {
+            jquery: bower_dir + "/jquery/jquery"
+
+        }
     },
     module: {
         loaders: [

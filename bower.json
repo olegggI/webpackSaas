@@ -1,0 +1,22 @@
+{
+  "name": "ws",
+  "description": "",
+  "main": "webpack.config.js",
+  "authors": [
+    "olegggI <ivanyuk@list.ru>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/olegggI/webpackSaas",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-touchswipe": "1.6.15",
+    "jquery": "2.0.0"
+  }
+}

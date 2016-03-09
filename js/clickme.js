@@ -1,3 +1,5 @@
+require("imports?$=jquery!jquery-touchswipe/jquery.touchSwipe");
+
 $('.clickme, .first').on('click', function(e){
 	require.ensure([], function(require) {
     	var a = require("clickme.scss");
