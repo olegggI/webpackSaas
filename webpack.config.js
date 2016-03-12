@@ -4,7 +4,6 @@ var bower_dir = __dirname + '/bower_components';
 var webpack = require('webpack');
 
 module.exports = {
-    // context: __dirname + "/app",
     entry: {
         home: "./js/home"
     },
@@ -25,22 +24,22 @@ module.exports = {
     resolve: {
         modulesDirectories: ['css/saas', 'html', 'bower_components'],
         alias: {
-            jquery: bower_dir + "/jquery/jquery"
-
+            jquery: "jquery/jquery",
+                touchSwipe: "jquery-touchswipe/jquery.touchSwipe"
         }
     },
     module: {
         loaders: [
-        {
-            test: /\.scss$/,
-            loader: ExtractTextPlugin.extract(
-            "style",
-            "css!sass")
-        },
-        { 
-            test: /\.html$/, 
-            loader: "underscore-template-loader"
-        }
+            {
+                test: /\.scss$/,
+                loader: ExtractTextPlugin.extract(
+                "style",
+                "css!sass")
+            },
+            { 
+                test: /\.html$/, 
+                loader: "underscore-template-loader"
+            }
         ]
     }
 };

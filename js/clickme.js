@@ -1,4 +1,4 @@
-require("imports?$=jquery!jquery-touchswipe/jquery.touchSwipe");
+require("touchSwipe");
 
 $('.clickme, .first').on('click', function(e){
 	require.ensure([], function(require) {
@@ -6,6 +6,7 @@ $('.clickme, .first').on('click', function(e){
     	console.log('clicked!');
 	})
 });
+
 
 
 
